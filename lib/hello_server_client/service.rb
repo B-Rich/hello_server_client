@@ -32,11 +32,12 @@ module HelloServerClient
       if id
         # something is indexed
         obj = self[id]
-        if obj.name == name
+        if obj and obj.name == name
           # good index
           return obj
         else
           @@index.delete(name)
+          return nil
         end
       else
         # get object
