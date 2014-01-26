@@ -3,7 +3,7 @@ require 'ohm'
 require 'ohm/contrib'
 
 module HelloServerClient
-  class Service < Ohm::Model
+  class Notification < Ohm::Model
     include Ohm::Timestamps
     include Ohm::DataTypes
 

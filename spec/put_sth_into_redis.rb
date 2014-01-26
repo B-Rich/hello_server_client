@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe HelloServerClient do
+describe HelloServerClient::Notification do
   it "put something into redis and get it back" do
     # HelloServerClient::Service.all.each(&:delete)
 
-    s = HelloServerClient::Service.find_or_initialize_by_name("temp2")
+    s = HelloServerClient::Notification.find_or_initialize_by_name("temp2")
     s.summary_header = [
       "id",
       "desc"
@@ -24,7 +24,7 @@ describe HelloServerClient do
     ]
     s.save!
 
-    a = HelloServerClient::Service.find_or_initialize_by_name("temp2")
+    a = HelloServerClient::Notification.find_or_initialize_by_name("temp2")
     a.summary_header.size.should == 2
     a.summaries.size.should == 2
     a.detail_header.size.should == 2

@@ -26,7 +26,7 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "lib/hello_server_client.rb",
-    "lib/hello_server_client/service.rb"
+    "lib/hello_server_client/notification.rb"
   ]
   s.homepage = "http://github.com/akwiatkowski/hello_server_client"
   s.licenses = ["LGPLv3"]
