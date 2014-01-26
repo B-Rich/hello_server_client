@@ -9,16 +9,18 @@ module HelloServerClient
 
     attribute :name
     unique :name
-    # can be slower that commented piece of code below
-    attribute :value, Type::Hash
-    attribute :detail, Type::Hash
+
+    attribute :summary_header, Type::Array
+    attribute :summaries, Type::Array
+
+    attribute :detail_header, Type::Array
+    attribute :details, Type::Array
 
     index :name
 
     def self.find_or_initialize_by_name(name)
       # find doesn't work
       #s = self.find(name: name)
-      #s = self.all.select { |o| o.name == name }.first
       s = find_by_name(name)
       if s.nil?
         s = self.new
