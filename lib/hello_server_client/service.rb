@@ -11,6 +11,7 @@ module HelloServerClient
     unique :name
     # can be slower that commented piece of code below
     attribute :value, Type::Hash
+    attribute :detail, Type::Hash
 
     index :name
 
