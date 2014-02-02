@@ -1,4 +1,3 @@
-require 'oj'
 require 'ohm'
 require 'ohm/contrib'
 
@@ -54,6 +53,7 @@ module HelloServerClient
       end
     end
 
+    # INFO: add oj gem
     #attribute :value_json
     #def value
     #  nil if self.value_json.nil?

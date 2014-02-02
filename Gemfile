@@ -1,6 +1,5 @@
 source "http://rubygems.org"
 
-gem 'oj'
 gem 'ohm'
 gem 'ohm-contrib'
 
